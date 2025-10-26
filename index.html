@@ -1,121 +1,56 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="utf-8" />
-    <title>Лабораторна робота №1 — Варіант 3</title>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №1</title>
 </head>
 <body>
-<h1>Лабораторна робота №1 — Основи побудови та публікації HTML-документів (Варіант 3)</h1>
-<p>Виконала студентка: <strong>Бондаренко Є.Ю.</strong></p>
+    <h1>Лабораторна робота №1</h1>
+    <h2>Основи побудови та публікації HTML-документів</h2>
 
-<p>
-  <a href="#chapter2">
-    <img src="https://via.placeholder.com/600x150?text=Банер+Університету" alt="Банер університету" width="600">
-  </a>
-</p>
+    <h3>Оформлений текст</h3>
+    <p><b><i>E = mc<sup>2</sup></i></b>, де <i>E</i> – energy of the object, <i>m</i> – it's mass, <i>c</i> – speed of light in vacuum, equals to 299&nbsp;792&nbsp;458&nbsp;m/s</p>
 
-<h2>Фрагмент оформленого тексту</h2>
-<p>
-  Рівняння енергії: <strong>E = m c<sup>2</sup></strong>.
-  Тут <em>E</em> — енергія об'єкта, <em>m</em> — його маса, а <em>c</em> — швидкість світла у вакуумі,
-  що приблизно дорівнює <strong>299&nbsp;792&nbsp;458&nbsp;m/s</strong>.
-</p>
-<p>
-  Приклад використання індексів: х<sub>0</sub>, CO<sub>2</sub>. Символи грецької: &alpha;, &beta;.
-  Спеціальні знаки: &lt;, &gt;, &amp;.
-</p>
+    <h3>Список</h3>
+    <form>
+        <label for="student">Оберіть студента групи:</label><br>
+        <select id="student" name="student">
+            <option>Студент 1</option>
+            <option>Студент 2</option>
+            <option>Студент 3</option>
+            <option>Студент 4</option>
+        </select>
+    </form>
 
-<h2>Перелік елементів сторінки</h2>
-<ul>
-  <li>Оформлений текст із верхнім і нижнім індексом</li>
-  <li>Випадаючий список студентів групи</li>
-  <li>Таблиця змісту</li>
-  <li>Форма для введення даних про студента</li>
-  <li>Гіперпосилання до розділу на тій же сторінці та банер</li>
-</ul>
+    <h3>Таблиця</h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Назва книги</th>
+            <th>Автор</th>
+        </tr>
+        <tr>
+            <td>HTML і CSS. Розробка та дизайн вебсайтів</td>
+            <td>Джон Дакетт</td>
+        </tr>
+        <tr>
+            <td>JavaScript для дітей</td>
+            <td>Нік Морган</td>
+        </tr>
+    </table>
 
-<h2>Випадаючий список студентів групи</h2>
-<form>
-  <label for="student">Оберіть студента:</label><br>
-  <select id="student" name="student">
-    <option value="voytova">Войтова П.І.</option>
-    <option value="petrenko">Петренко П.П.</option>
-    <option value="shevchenko">Шевченко С.С.</option>
-    <option value="bondarenko" selected>Бондаренко Є.Ю. (я)</option>
-  </select>
-</form>
+    <h3>Форма з керуючими елементами</h3>
+    <form>
+        <label for="name">Ім’я студента:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="group">Група:</label><br>
+        <input type="text" id="group" name="group"><br><br>
+        <label for="email">Електронна пошта:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Надіслати">
+    </form>
 
-<h2>Таблиця: Зміст довільної книги</h2>
-<table border="1" cellpadding="6" cellspacing="0">
-  <caption>Зміст книги "Вступ до HTML"</caption>
-  <thead>
-    <tr>
-      <th>Розділ</th>
-      <th>Сторінки</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Передмова</td>
-      <td>1–4</td>
-    </tr>
-    <tr>
-      <td id="chapter1">Розділ 1. Основи HTML</td>
-      <td>5–28</td>
-    </tr>
-    <tr>
-      <td id="chapter2">Розділ 2. Теги та структури</td>
-      <td>29–56</td>
-    </tr>
-    <tr>
-      <td>Розділ 3. Формування документів</td>
-      <td>57–84</td>
-    </tr>
-    <tr>
-      <td>Додатки</td>
-      <td>85–92</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Форма для введення інформації про студента</h2>
-<form action="#" method="post">
-  <p>
-    <label for="fullname">ПІБ:</label><br>
-    <input type="text" id="fullname" name="fullname" required placeholder="Прізвище Ім'я По батькові">
-  </p>
-  <p>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="student@example.com">
-  </p>
-  <p>Стать:<br>
-    <label><input type="radio" name="gender" value="female" checked> Жіноча</label>
-    <label><input type="radio" name="gender" value="male"> Чоловіча</label>
-  </p>
-  <p>Форма навчання:<br>
-    <label><input type="checkbox" name="fulltime"> Денна</label>
-    <label><input type="checkbox" name="parttime"> Заочна</label>
-  </p>
-  <p>
-    <label for="group">Група:</label><br>
-    <select id="group" name="group">
-      <option value="K-01">К-01</option>
-      <option value="K-02">К-02</option>
-      <option value="K-03">К-03</option>
-    </select>
-  </p>
-  <p>
-    <label for="notes">Коментарі:</label><br>
-    <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Додаткова інформація..."></textarea>
-  </p>
-  <p>
-    <button type="submit">Надіслати</button>
-    <button type="reset">Очистити</button>
-  </p>
-</form>
-
-<h2>Гіперпосилання всередині сторінки</h2>
-<p>Перейти прямо до розділу 2 таблиці: <a href="#chapter2">Розділ 2. Теги та структури</a></p>
-
+    <h3>Посилання та зображення</h3>
+    <p>Перейдіть до <a href="#top">верхньої частини цієї сторінки</a> або відвідайте <a href="https://github.com" target="_blank">GitHub</a>.</p>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Зображення" width="150"></p>
 </body>
 </html>
