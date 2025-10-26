@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Лабораторна робота №1</title>
+    <meta charset="utf-8">
+    <title>Лабораторна робота №1 — Варіант 3</title>
 </head>
-<body>
+<body id="top">
     <h1>Лабораторна робота №1</h1>
     <h2>Основи побудови та публікації HTML-документів</h2>
 
     <h3>Оформлений текст</h3>
-    <p><b><i>E = mc<sup>2</sup></i></b>, де <i>E</i> – energy of the object, <i>m</i> – it's mass, <i>c</i> – speed of light in vacuum, equals to 299&nbsp;792&nbsp;458&nbsp;m/s</p>
+    <p>
+        <!-- формула: жирна і курсивна -->
+        <b><i>E = mc<sup>2</sup></i></b>.
+        <!-- коротке позначення WA як в оригіналі (звичайний текст, не курсив) -->
+        WA.
+    </p>
+
+    <p>
+        <!-- Подальші пояснення — точна комбінація жирного/звичайного/курсивного -->
+        <b>E</b> — <small><b>m</b></small> дорівнює its mass <b>s</b>.
+        <!-- приклад: цифри, що задають m і s, НЕ жирні, але курсивні -->
+        Цифри, що задають <i>m</i> і <i>s</i>, наведені курсивом: <i>5</i>, <i>10</i>.
+    </p>
 
     <h3>Список</h3>
+    <p>Оберіть студента бригади (тільки прізвища):</p>
     <form>
-        <label for="student">Оберіть студента групи:</label><br>
-        <select id="student" name="student">
-            <option>Студент 1</option>
-            <option>Студент 2</option>
-            <option>Студент 3</option>
-            <option>Студент 4</option>
+        <select name="student" id="student">
+            <option>Бондаренко</option>
+            <option>Шевченко</option>
+            <option>Коваленко</option>
+            <option>Мельник</option>
         </select>
     </form>
 
     <h3>Таблиця</h3>
-    <table border="1" cellpadding="5">
+    <table border="1" cellpadding="6" cellspacing="0">
         <tr>
-            <th>Назва книги</th>
-            <th>Автор</th>
+            <th>Назва розділу</th>
+            <th>Сторінки</th>
         </tr>
         <tr>
-            <td>HTML і CSS. Розробка та дизайн вебсайтів</td>
-            <td>Джон Дакетт</td>
+            <td>Вступ до HTML</td>
+            <td>1–8</td>
         </tr>
         <tr>
-            <td>JavaScript для дітей</td>
-            <td>Нік Морган</td>
+            <td>Теги і структура</td>
+            <td>9–24</td>
+        </tr>
+        <tr>
+            <td>Форми та елементи керування</td>
+            <td>25–34</td>
         </tr>
     </table>
 
-    <h3>Форма з керуючими елементами</h3>
+    <h3>Форма для введення інформації про студента</h3>
     <form>
-        <label for="name">Ім’я студента:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="group">Група:</label><br>
-        <input type="text" id="group" name="group"><br><br>
+        <label for="fullname">Прізвище та ім'я:</label><br>
+        <input type="text" id="fullname" name="fullname"><br><br>
+
+        <label for="brigade">Номер бригади:</label><br>
+        <input type="text" id="brigade" name="brigade"><br><br>
+
         <label for="email">Електронна пошта:</label><br>
         <input type="email" id="email" name="email"><br><br>
+
         <input type="submit" value="Надіслати">
     </form>
 
     <h3>Посилання та зображення</h3>
-    <p>Перейдіть до <a href="#top">верхньої частини цієї сторінки</a> або відвідайте <a href="https://github.com" target="_blank">GitHub</a>.</p>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Зображення" width="150"></p>
+    <p>Перейдіть на <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> або до <a href="#top">верхньої частини сторінки</a>.</p>
+    <p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" alt="Ілюстрація" width="140">
+    </p>
 </body>
 </html>
